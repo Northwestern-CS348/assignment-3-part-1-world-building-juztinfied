@@ -37,6 +37,7 @@ class KBTest(unittest.TestCase):
             'fact: (movable disk1 peg1 peg3)',
         ]
         self.checkMovables(th, expectedMovables)
+        
 
     def test02(self):
         th = TowerOfHanoiGame()
@@ -56,6 +57,7 @@ class KBTest(unittest.TestCase):
             'fact: (movable disk5 peg1 peg3)',
         ]
         self.checkKb(th.kb, required, forbidden)
+        print('hello')
 
     def test03(self):
         th = TowerOfHanoiGame()
@@ -66,6 +68,7 @@ class KBTest(unittest.TestCase):
             'fact: (movable disk3 peg1 peg2)',
         ]
         self.checkMovables(th, expectedMovables)
+        
 
     def test04(self):
         th = TowerOfHanoiGame()
@@ -89,6 +92,7 @@ class KBTest(unittest.TestCase):
             'fact: (movable disk5 peg1 peg3)',
         ]
         self.checkKb(th.kb, required, forbidden)
+        
 
     def test05(self):
         th = TowerOfHanoiGame()
@@ -99,6 +103,7 @@ class KBTest(unittest.TestCase):
             'fact: (movable disk2 peg2 peg1)',
         ]
         self.checkMovables(th, expectedMovables)
+        print('helasdflo')
 
     def test06(self):
         th = TowerOfHanoiGame()
@@ -176,6 +181,7 @@ class KBTest(unittest.TestCase):
             'fact: (movable tile5 pos3 pos3 pos3 pos3)',
         ]
         self.checkKb(p8.kb, required, forbidden)
+        print('helasdfasdfasdfadsfasflo')
 
 
 if __name__ == '__main__':

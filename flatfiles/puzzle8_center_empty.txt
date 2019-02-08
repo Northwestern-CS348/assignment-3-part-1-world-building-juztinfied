@@ -1,31 +1,12 @@
-"""
-For a game with 8 tiles of blocks on a 3x3 grid,
-write down the Facts and Rules to model the game state 
-shown as the follows:
-
- y\\x   pos1     pos2     pos3
-     ┌────────┬────────┬────────┐
-pos1 │ tile1  │ tile2  │ tile3  │
-     ├────────┼────────┼────────┤
-pos2 │ tile8  │ empty  │ tile4  │
-     ├────────┼────────┼────────┤
-pos3 │ tile7  │ tile6  │ tile5  │
-     └────────┴────────┴────────┘
-
-Example: 
-fact: (pred obj1 obj2)
-rule: ((pred obj1 obj2) (pred obj2 obj3)) -> (pred obj1 obj3)
-
-"""
-fact: (INST tile1 tile)
-fact: (INST tile2 tile)
-fact: (INST tile3 tile)
-fact: (INST tile4 tile)
-fact: (INST tile5 tile)
-fact: (INST tile6 tile)
-fact: (INST tile7 tile)
-fact: (INST tile8 tile)
-fact: (INST empty tile)
+fact: (inst tile1 tile)
+fact: (inst tile2 tile)
+fact: (inst tile3 tile)
+fact: (inst tile4 tile)
+fact: (inst tile5 tile)
+fact: (inst tile6 tile)
+fact: (inst tile7 tile)
+fact: (inst tile8 tile)
+fact: (inst empty tile)
 
 fact: (XLOC tile1 pos1)
 fact: (YLOC tile1 pos1)
@@ -50,4 +31,4 @@ rule: ((XLOC ?piece ?piecex) (YLOC ?piece ?piecey) (XLOC empty ?piecex) (YLOC em
 rule: ((XLOC ?piece ?piecex) (YLOC ?piece ?piecey) (XLOC empty ?piecex) (YLOC empty ?emptyy) (YLOC empty pos2)) -> (ADJACENT ?piece empty)
 rule: ((XLOC ?piece ?piecex) (YLOC ?piece ?piecey) (XLOC empty ?emptyx) (YLOC empty ?piecey) (XLOC empty pos2)) -> (ADJACENT ?piece empty)
 rule: ((XLOC ?piece ?piecex) (YLOC ?piece ?piecey) (XLOC empty ?piecex) (YLOC empty ?piecey) (XLOC ?piece pos2)) -> (ADJACENT ?piece empty)
-rule: ((ADJACENT ?piece ?empty) (XLOC ?piece ?initialX) (YLOC ?piece ?initialY) (XLOC empty ?targetx) (YLOC empty ?targety)) -> (MOVABLE ?piece ?initialX ?initialY ?targetx ?targety)
+rule: ((ADJACENT ?piece ?empty) (XLOC ?piece ?initialX) (YLOC ?piece ?initialY) (XLOC empty ?targetx) (YLOC empty ?targety)) -> (movable ?piece ?initialX ?initialY ?targetx ?targety)
