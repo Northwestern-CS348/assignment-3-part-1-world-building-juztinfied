@@ -10,20 +10,29 @@ fact: (inst empty tile)
 
 fact: (XLOC tile1 pos2)
 fact: (YLOC tile1 pos2)
+
 fact: (XLOC tile2 pos3)
 fact: (YLOC tile2 pos3)
+
 fact: (XLOC tile3 pos2)
 fact: (YLOC tile3 pos3)
+
 fact: (XLOC tile4 pos2)
 fact: (YLOC tile4 pos1)
+
 fact: (XLOC tile5 pos1)
 fact: (YLOC tile5 pos1)
+
 fact: (XLOC tile6 pos1)
 fact: (YLOC tile6 pos2)
+
 fact: (XLOC tile7 pos1)
 fact: (YLOC tile7 pos3)
+
 fact: (XLOC tile8 pos3)
 fact: (YLOC tile8 pos2)
+
+
 fact: (XLOC empty pos3)
 fact: (YLOC empty pos1)
 
